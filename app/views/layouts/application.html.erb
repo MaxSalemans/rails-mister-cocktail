@@ -10,25 +10,26 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <%= link_to "Cocktails", cocktails_path,  class: "navbar-brand" %>
-</button>
-<div class="collapse navbar-collapse" id="navbarText">
-  <ul class="navbar-nav mr-auto">
-    <li class="nav-item">
-      <%= link_to "add new cocktail", new_cocktail_path, class: "nav-link"  %>
-    </li>
-  </ul>
-  <span class="navbar-text">
-    YummY cocktails 🌻
-  </span>
-</div>
-</nav>
-
 <body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <%= link_to "Cocktails", cocktails_path,  class: "navbar-brand" %>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to "add new cocktail", new_cocktail_path, class: "nav-link"  %>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        YummY cocktails 🌻
+      </span>
+    </div>
+  </nav>
+
   <%= yield %>
 </body>
-
+</div>
 <%= javascript_include_tag "application" %>
 <%= javascript_pack_tag "application" %>
 </html>

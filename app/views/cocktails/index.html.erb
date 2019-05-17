@@ -1,27 +1,15 @@
-<div class="container">
+<% colors = ["#EDFFD9", "#03B5AA", "#FDE2FF"] %>
 
-<div class="banner">
-<h1> Cocktail mixups! </h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../../assets/images/kleurenpalet.jpg);">
+  <div class="container">
+    <h1> Cocktails are so 2008 . . . </h1>
+  </div>
 </div>
+
 
 <div class="cards">
 <% @cocktails.each do |cocktail| %>
-
-
-   <div class="card-category">
+   <div class="card-category" style="background-color: <%= colors.sample %>">
        <%= link_to cocktail.name.capitalize, cocktail_path(cocktail) %>
   </div>
-
-
-  <% end %>
-
-
-<ul class="list-group">
-  <% @cocktails.each do |cocktail| %>
-    <li class="list-group-item" >
-       <%= link_to cocktail.name.capitalize, cocktail_path(cocktail) %>
-       </li>
-  <% end %>
-</ul>
-
-</div>
+<% end %>
