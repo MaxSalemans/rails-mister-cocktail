@@ -1,8 +1,14 @@
 <h1><%= @cocktail.name.capitalize %></h1>
 
-<div class="plaatje">
+<% if @cocktail[:photo].nil? %>
+<div>
+  <%= image_tag "https://i.pinimg.com/474x/0e/5e/3b/0e5e3be035b76064988ad7e5bf0d5458--funny-frogs-tree-frogs.jpg", width: 400, crop: :fill %>
+</div>
+<% else %>
+<div class="plaatje mb-5">
   <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
 </div>
+<% end %>
 
 <% @cocktail.doses.each do |dose| %>
  <p> <%= dose.ingredient.name %>: <%= dose.description %> <%= link_to "<i class='fas fa-trash'></i>".html_safe, dose_path(dose), method: :delete, data: { confirm: "YOU SURE?"} %></p>
