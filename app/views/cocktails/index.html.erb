@@ -11,7 +11,12 @@
 
 <div class="cards">
 <% @cocktails.each do |cocktail| %>
-   <div class="card-category" style="background-color: <%= colors.sample %>">
+<div class="card-category" style="background-color: <%= colors.sample %>">
        <%= link_to cocktail.name.capitalize, cocktail_path(cocktail) %>
   </div>
+
+
+
 <% end %>
+
+

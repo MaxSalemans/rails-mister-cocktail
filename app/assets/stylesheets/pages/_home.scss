@@ -19,7 +19,18 @@ h1 {
 form {
   width: 50%;
   margin: 0 auto;
+  text-align: left;
+  .centertext{
+    text-align: center;
+  }
 }
+
+p {
+  font-size: 23px;
+  color: #224E34;
+  font-family: "Helvetica"
+}
+
 
 .btn {
   background-color: #224E34;
@@ -27,4 +38,12 @@ form {
   padding: 12px;
   font-weight: 400;
   font-size: 20px;
+}
+
+.btn:hover{
+  background-color: #486B5E;
+}
+
+i {
+  color: #224E34;
 }
