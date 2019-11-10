@@ -1,8 +1,8 @@
 <h1><%= @cocktail.name.capitalize %></h1>
 
 <% if @cocktail[:photo].nil? %>
-<div>
-  <%= image_tag "https://i.pinimg.com/474x/0e/5e/3b/0e5e3be035b76064988ad7e5bf0d5458--funny-frogs-tree-frogs.jpg", width: 400, crop: :fill %>
+<div class="mb-5">
+  <%= image_tag "https://i.pinimg.com/originals/b7/6a/bf/b76abf2167db870643b5b5163a4d7f65.jpg", width: 400, crop: :fill %>
 </div>
 <% else %>
 <div class="plaatje mb-5">
